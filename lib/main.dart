@@ -1,33 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:mmmy/src/colors.dart';
+import 'package:mmmy/src/strings.dart';
 
 void main() => runApp(RegisterPageOne());
 
 class RegisterPageOne extends StatelessWidget {
 
-  final backgroundColor = Color.fromRGBO(232, 236, 239, 1);
-  final titleColor = Color.fromRGBO(83, 106, 176, 1);
-  final fontColor = Color.fromRGBO(91, 95, 98, 1);
-  final buttonColor = Color.fromRGBO(100, 147, 252, 1);
-
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
 
-    final title = "加入mmmy";
-    final content = "新建帐户，只需简单几步就搞定啦!";
-
     return MaterialApp(
       title: 'Register Page One',
       theme: ThemeData(
-        backgroundColor: backgroundColor,
+        backgroundColor: colors.backgroundColor,
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            title,
-            style: TextStyle(color: backgroundColor),
+            register.title,
+            style: TextStyle(color: colors.backgroundColor),
             textAlign: TextAlign.center,
           ),
         ),
@@ -36,17 +29,18 @@ class RegisterPageOne extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Text(
-                  content,
-                  style: TextStyle(color: fontColor,fontSize: 16.0),
+                  register.content,
+                  style: TextStyle(color: colors.fontColor,fontSize: 16.0),
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
                 FlatButton(
-                  child: new Text('开始',style: new TextStyle(fontSize: 16.0,
+                  child: new Text(register.buttonTitle,style: new TextStyle(fontSize:
+                  16.0,
                       color:
-                      backgroundColor)),
-                  color: buttonColor,
+                      colors.backgroundColor)),
+                  color: colors.buttonColor,
                   onPressed: (){},
                 )
               ],

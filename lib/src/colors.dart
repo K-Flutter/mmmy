@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
 
-mixin color {
+mixin colors {
 
   /// Register Page's Background Color
   static final backgroundColor = Color.fromRGBO(232, 236, 239, 1);
@@ -14,5 +13,5 @@ mixin color {
 
   /// Register Page's button Color
   static final buttonColor = Color.fromRGBO(100, 147, 252, 1);
-
 }
+
