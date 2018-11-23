@@ -8,4 +8,7 @@ class Register extends Widget {
     return null;
   }
 
+  void mainPage() {
+
+  }
 }
